@@ -4,7 +4,7 @@
 
 * Crea un entorno virtual de python3 e instala las dependencias necesarias para que funcione el proyecto (fichero requirements.txt).
 
-[Crear entorno virtual](https://github.com/CeliaGMqrz/trabajando_python3_venv)
+[Crear entorno virtual](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/https://github.com/CeliaGMqrz/trabajando_python3_venv)
 
 * Comprueba que vamos a trabajar con una base de datos sqlite (django_tutorial/settings.py). ¿Cómo se llama la base de datos que vamos a crear?
 
@@ -65,24 +65,24 @@ python3 manage.py createsuperuser
 ```powershell
 python manage.py runserver
 ```
-![c1.png](c1.png)
+![c1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/c1.png)
 
-![c2.png](c2.png)
+![c2.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/c2.png)
 
 * Crea dos preguntas, con posibles respuestas.
 
 Le damos a + 'add' y creamos las respuestas y luego 'Save' para guardarlas.
 
-![q1.png](q1.png)
+![q1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/q1.png)
 
-![q2.png](q2.png)
+![q2.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/q2.png)
 
 * Comprueba en el navegador que la aplicación está funcionando, accede a la url \polls.
 
 
-![fun1.png](fun1.png)
+![fun1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/fun1.png)
 
-![fun2.png](fun2.png)
+![fun2.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/fun2.png)
 
 _________________________________________________________________________________
 
@@ -137,7 +137,7 @@ nano /etc/apache2/sites-available/django.conf
 ```
 
 
-* Crea un entorno virtual e instala las dependencias de tu aplicación.
+* Crea un entorno virtual e instala las dependencias de tu aplicación
 
 ```powershell
 apt install python3-venv
@@ -288,7 +288,7 @@ python3 manage.py createsuperuser
 ```
 Nos sale un error que nos indica que tenemos que permitir al host, para ello añadimos lo siguiente en el fichero settings.py
 
-![error1.png](error1.png)
+![error1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/error1.png)
 
 ```sh
 ALLOWED_HOSTS = ['www.celia.django.iesgn.org']
@@ -296,7 +296,7 @@ ALLOWED_HOSTS = ['www.celia.django.iesgn.org']
 
 Ahora vemos que podemos ver el sitio web pero no se ha cargado el contenido estático:
 
-![error2.png](error2.png)
+![error2.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/error2.png)
 
 Para solucionarlo vamos a configurar dos alias con las rutas del contenido estático, por lo tanto el fichero de configuración quedaría de esta forma:
 
@@ -334,11 +334,11 @@ Para solucionarlo vamos a configurar dos alias con las rutas del contenido está
 
 Comprobamos que funciona correctamente
 
-![prod1.png](prod1.png)
+![prod1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/prod1.png)
 
-![prod2.png](prod2.png)
+![prod2.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/prod2.png)
 
-![prod3.png](prod3.png)
+![prod3.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/prod3.png)
 
 _____________________________________________________________________________________
 
@@ -353,11 +353,11 @@ Vamos a realizar cambios en el entorno de desarrollo y posteriormente vamos a su
 nano django_tutorial/polls/templates/polls/index.html.
 ```
 
-![nombre.png](nombre.png)
+![nombre.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/nombre.png)
 
 * Modifica la imagen de fondo que se ve la aplicación.
 
-![fondo.png](fondo.png)
+![fondo.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/fondo.png)
 
 * Vamos a crear una nueva tabla en la base de datos, para ello sigue los siguientes pasos
 
@@ -418,10 +418,10 @@ admin.site.register(Categoria)
 
 ```
 
-![categoria1.png](categoria1.png)
+![categoria1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/categoria1.png)
 
 * Despliega el cambio producido al crear la nueva tabla en el entorno de producción.
 
-![nombre1.png](nombre1.png)
+![nombre1.png](https://github.com/CeliaGMqrz/utilidades/blob/main/practicas_sueltas/python_django/capturas/nombre1.png)
 
 
