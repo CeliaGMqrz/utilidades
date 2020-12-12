@@ -137,7 +137,7 @@ nano /etc/apache2/sites-available/django.conf
 ```
 
 
-* Crea un entorno virtual e instala las dependencias de tu aplicación.
+* Crea un entorno virtual e instala las dependencias de tu aplicación
 
 ```powershell
 apt install python3-venv
