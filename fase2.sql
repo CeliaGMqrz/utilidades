@@ -8,18 +8,18 @@
 -- -> El personal siempre se incorpora el primer lunes de un mes.
 CREATE TABLE personal 
 (
-    nif                     VARCHAR2(9),
-    nombre                  VARCHAR2(15),
-    apellido1               VARCHAR2(15),
-    apellido2               VARCHAR2(15),
-    domicilio               VARCHAR2(70),
-    titulo                  VARCHAR2(70),
-    fecha_incorporacion     DATE,
-    aula_trabajo            VARCHAR2(3),
-    CONSTRAINT pk_personal PRIMARY KEY (nif),
-    CONSTRAINT formatonif_personal CHECK (REGEXP_LIKE (nif, '^[0-9]{8}[A-Za-z]{1}$') OR (REGEXP_LIKE (nif, '^[Kk,Ll,Mm,Xx,Yy,Zz]{1}[0-9]{7}[A-Za-z]{1}$'))),
-    CONSTRAINT titulo_p_letra_may CHECK (titulo = (INITCAP(titulo))),
-    CONSTRAINT incorp_lunes_ok CHECK ((TO_CHAR (fecha_incorporacion, 'D') = 2 ) AND (TO_NUMBER(TO_CHAR(TO_DATE(fecha_incorporacion,'DD/MM/YYYY'),'W')) = 1 ))
+nif                     VARCHAR2(9),
+nombre                  VARCHAR2(15),
+apellido1               VARCHAR2(15),
+apellido2               VARCHAR2(15),
+domicilio               VARCHAR2(70),
+titulo                  VARCHAR2(70),
+fecha_incorporacion     DATE,
+aula_trabajo            VARCHAR2(3),
+CONSTRAINT pk_personal PRIMARY KEY (nif),
+CONSTRAINT formatonif_personal CHECK (REGEXP_LIKE (nif, '^[0-9]{8}[A-Za-z]{1}$') OR (REGEXP_LIKE (nif, '^[Kk,Ll,Mm,Xx,Yy,Zz]{1}[0-9]{7}[A-Za-z]{1}$'))),
+CONSTRAINT titulo_p_letra_may CHECK (titulo = (INITCAP(titulo))),
+CONSTRAINT incorp_lunes_ok CHECK ((TO_CHAR (fecha_incorporacion, 'D') = 2 ) AND (TO_NUMBER(TO_CHAR(TO_DATE(fecha_incorporacion,'DD/MM/YYYY'),'W')) = 1 ))
 );
 
 -- DATOS VALIDOS: 8 REGISTROS
@@ -401,7 +401,7 @@ VALUES ('V01','Visita guiada a entornos naturales para fomentar el contacto con 
 INSERT INTO complementos (codigo,descripcion,importe,tipo) 
 VALUES ('C002','Servicio de comedor que incluye desayuno, media mañana,almuerzo y merienda',50.00,'Servicio de comedor');
 INSERT INTO complementos (codigo,descripcion,importe,tipo) 
-VALUES ('I003','Inglés integrado en la educacion impartida',20.00,'Clases de inglés');
+VALUES ('I003','Inglés integrado en la educacion impartida',19.00,'Clases inglés');
 INSERT INTO complementos (codigo,descripcion,importe,tipo) 
 VALUES ('D04','Clases de danza didáctica para despertar la creatividad, espontaneidad y la expresividad de los niños.',15.00,'Clases de danza');
 
