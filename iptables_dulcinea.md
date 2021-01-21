@@ -64,3 +64,30 @@ COMMIT
 # Completed on Thu Jan 21 12:17:56 2021
 
 ```
+
+* Comprobar las reglas que esten funcionando
+
+
+```sh
+sudo iptables -t nat -L -nv
+```
+
+```sh
+debian@dulcinea:~$ sudo iptables -t nat -L -nv
+Chain PREROUTING (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    6   360 DNAT       tcp  --  eth0   *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80 to:10.0.2.4:80
+    6   360 DNAT       tcp  --  eth0   *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:10.0.2.4:443
+    3   332 DNAT       udp  --  eth0   *       0.0.0.0/0            0.0.0.0/0            udp dpt:53 to:10.0.1.2:53
+    1    60 DNAT       tcp  --  eth0   *       0.0.0.0/0            0.0.0.0/0            tcp dpt:25 to:10.0.1.2:25
+
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain POSTROUTING (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+  456 34876 MASQUERADE  all  --  *      eth0    10.0.1.0/24          0.0.0.0/0           
+  148 10848 MASQUERADE  all  --  *      eth0    10.0.2.0/24          0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination   
